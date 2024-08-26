@@ -14,3 +14,6 @@ module.exports.redisCredentials = {
 module.exports.authSecretKey = {
   secretKey: process.env.JWT_SECRET,
 }
+module.exports.serverPort = {
+  port: process.env.PORT,
+}

@@ -1,5 +1,5 @@
 const express = require('express');
-require("dotenv").config();
+const { serverPort } = require('./config/index')
 const sequelize = require('./db/index');
 const userRoutes = require('./modules/user/userRoutes');
 const fileRoutes = require('./modules/file/fileRoutes');
@@ -19,5 +19,5 @@ sequelize.sync().then(result =>{
     console.log(err)
 })
 
-const PORT = process.env.PORT || 5000;
+const PORT = serverPort.port || 5000;
 app.listen(PORT, () => console.log(`Server running on port htpp://localhost:${PORT}`));
