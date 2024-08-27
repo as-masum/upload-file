@@ -11,9 +11,9 @@ module.exports.redisCredentials = {
   redisPort: process.env.REDIS_PORT
 }
 
-module.exports.authSecretKey = {
+module.exports.middelwareCredentials = {
   secretKey: process.env.JWT_SECRET,
 }
-module.exports.serverPort = {
+module.exports.serverCredentials = {
   port: process.env.PORT,
 }
